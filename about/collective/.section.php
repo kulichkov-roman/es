@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Коллектив";
+$arDirProperties = array(
+
+);
+?>

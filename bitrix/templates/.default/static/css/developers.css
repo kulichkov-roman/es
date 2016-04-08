@@ -1,0 +1,207 @@
+.catList__headerTitle {
+    vertical-align: middle;
+    max-width: 700px;
+    font: 18px/23px 'SegoeUI', Verdana, Arial, sans-serif;
+    color: #326bae; }
+
+/*---------------------Ошибка-----------------------------*/
+.form_message2 {
+    position: relative;
+    padding: 15px 20px 15px 20px;
+    background: #f2dede;
+    border-color: #eed3d7;
+    font-style: normal;
+    width: 345px;
+}
+.form_message2 .message_title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 9px 0;
+    color: #b94a48;
+}
+.form_message2 .message_item {
+    font-size: 14px;
+    color: #b94a48
+}
+.form_message2 .message_item .alert-link {
+    color: #953b39;
+}
+/*---------------------Успех------------------------------*/
+.form_message3 {
+    position: relative;
+    padding: 15px 20px 15px 20px;
+    background: #dff0d8;
+    border-color: #d6e9c6;
+    font-style: normal;
+    width: 345px;
+}
+.form_message3 .message_title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 9px 0;
+    color: #468847;
+}
+.form_message3 .message_item {
+    font-size: 14px;
+    color: #468847
+}
+.form_message3 .message_item .alert-link {
+    color: #356635;
+}
+/*---------------------Результат------------------------------*/
+.form_message4 {
+    position: relative;
+    padding: 15px 20px 15px 20px;
+    background: #d9edf7;
+    border-color: #bce8f1;
+    font-style: normal;
+    width: 345px;
+}
+.form_message4 .message_title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 9px 0;
+    color: #3a87ad;
+}
+.form_message4 .message_item {
+    font-size: 14px;
+    color: #3a87ad
+}
+.form_message4 .message_item .alert-link {
+    color: #296a8a;
+}
+/*---------------------Внимание------------------------------*/
+.form_message5 {
+    position: relative;
+    padding: 15px 20px 15px 20px;
+    background: #fbeed5;
+    border-color: #fcf8e3;
+    font-style: normal;
+    width: 345px;
+}
+.form_message5 .message_title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 9px 0;
+    color: #c09853;
+}
+.form_message5 .message_item {
+    font-size: 14px;
+    color: #c09853;
+}
+.form_message5 .message_item .alert-link {
+    color: #2d6987;
+}
+
+/*------------------- toolbar filter -----------------*/
+
+.catTile {
+	margin-top: 0;
+}
+.catTile__list {
+	margin-top: 0;
+}
+.catTile__toolbar {
+	position: relative;
+	padding-top: 23px;
+	padding-bottom: 23px;
+}
+.toolbar-fixed {
+	width: 100%;
+	position: fixed;
+    left: 50%;
+    margin-left: -500px;
+	top: 0;
+	z-index: 100;
+	background: #f5f5f5;
+}
+.catTile__toolbar.toolbar-fixed:before {
+    display: block;
+    width: 20000px;
+    height: 79px;
+    position: absolute;
+    background: #f5f5f5;
+    left: -10000px;
+    top: 0;
+}
+
+/*------------------- collective---- -----------------*/
+.w232px {
+    width: 232px;
+}
+/*-------------------- developers --------------------*/
+.footer__copyright_developer {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    color: #5d5d5d;
+    font: 9px/9px Verdana,Arial,sans-serif;
+}
+.footer__copyright_developer a {
+    color: #5d5d5d;
+    font: 9px/9px Verdana,Arial,sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footer__copyright_developer a:hover {
+    color: #2c8bff;
+}
+
+/* new title*/
+.news__toolbarTitle {
+    float: left;
+    max-width: 500px;
+}
+/* object detail */
+
+.object-detail__collapse-btn {
+    bottom: 0;
+}
+
+.object-detail.in .object-detail__collapse-btn:before {
+    height: 48px;
+}
+
+/* SEO block */
+
+.seo-block__body {
+    min-height: 0;
+}
+
+ol:not([class]) > li:before {
+    content: none;
+}
+
+.services__list {
+    padding-bottom: 40px;
+}
+
+/* Fix reviews */
+
+.invisibility {
+    visibility: hidden;
+}
+
+/* Правка заголовка в публикациях */
+
+.books-other__title {
+    font-size: 16px;
+}
+
+.patents-announce__title {
+    font-size: 16px;
+}
+
+/* правка слайдера в карточке птенотв и аналогичных*/
+.object__info._narrow  {
+    width: 500px !important;
+}
+
+.object__slider._narrow {
+    width: 480px !important;
+}
+
+.objectSlider.no-slider .bx-controls {
+    display: none;
+}

@@ -1,0 +1,1 @@
+<span class="footer__copyrightName">ООО НПЦ «ЭРКОНСИБ» <?$x=2014; $now=getdate(); if($now["year"]>$x) {echo $now["year"];} else echo $x; ?> г.</span>

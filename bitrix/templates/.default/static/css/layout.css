@@ -1,0 +1,164 @@
+/*============================ Layout ========================================*/
+.row {
+  display: -ms-flexbox;
+  -ms-flex-direction: row;
+  -ms-flex-wrap: wrap;
+  -ms-flex-flow: row wrap;
+}
+html {
+  height: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  height: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: auto;
+  box-sizing: border-box;
+}
+.ie9 body {
+  overflow: visible;
+}
+.template {
+  position: relative;
+  width: 100%;
+  min-width: inherit;
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+.template__top {
+  position: relative;
+}
+.template__middle {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.template__middle-cont {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.template__middle-cont:before,
+.template__middle-cont:after {
+  content: "";
+  width: 100%;
+  height: 0;
+  display: table;
+  clear: both;
+}
+.template__bottom {
+  position: relative;
+}
+.ie8 .template,
+.ie9 .template {
+  width: 100%;
+  height: 100%;
+  display: table;
+  table-layout: fixed;
+}
+.ie8 .template__top,
+.ie9 .template__top,
+.ie8 .template__middle,
+.ie9 .template__middle,
+.ie8 .template__bottom,
+.ie9 .template__bottom {
+  display: table-row;
+}
+.ie8 .template__cell,
+.ie9 .template__cell {
+  width: 100%;
+  display: table-cell;
+}
+.ie8 .template__middle,
+.ie9 .template__middle {
+  height: 100%;
+}
+.ie8 .template__middle-cell,
+.ie9 .template__middle-cell {
+  position: relative;
+  height: auto;
+  min-height: 0;
+}
+/*==============================Hack==========================================*/
+/*---Opera---*/
+@media all and (-webkit-min-device-pixel-ratio: 10000), not all and (-webkit-min-device-pixel-ratio: 0) {
+  .template {
+    width: 100%;
+    height: 100%;
+    display: table;
+    table-layout: fixed;
+  }
+  .template-top,
+  .template-middle,
+  .template-bottom {
+    display: table-row;
+  }
+  .template-cell {
+    width: 100%;
+    display: table-cell;
+  }
+  .template-middle-cell {
+    position: relative;
+    height: 100%;
+  }
+}
+/* стиль только для Opera 12.00+ */
+@media (min-resolution: 0.001dpcm) {
+  body:-o-prefocus .template {
+    width: 100%;
+    height: 100%;
+    display: table;
+    table-layout: fixed;
+  }
+  body:-o-prefocus .template-top,
+  body:-o-prefocus .template-middle,
+  body:-o-prefocus .template-bottom {
+    display: table-row;
+  }
+  body:-o-prefocus .template-cell {
+    width: 100%;
+    display: table-cell;
+  }
+  body:-o-prefocus .template-middle-cell {
+    position: relative;
+    height: 100%;
+    min-height: 0;
+  }
+}
+/*=========================== !Layout! =======================================*/

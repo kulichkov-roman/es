@@ -1,0 +1,1 @@
+<span class="logo__linkTitle">основан в 1992 году</span>

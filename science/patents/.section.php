@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Патенты";
+$arDirProperties = array(
+
+);
+?>
