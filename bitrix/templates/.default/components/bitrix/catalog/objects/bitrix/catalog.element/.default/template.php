@@ -12,17 +12,10 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-//echo "<pre>"; var_dump($arResult); echo "</pre>";
-
 ?>
 <div class="object object-detail collapse-block">
     <div class="object-detail__inner collapse-block__head">
         <div class="object__header">
-            <?/*
-	    	<a href="<?=$arResult["SECTION"]["SECTION_PAGE_URL"]?>" class="object__headerPrev">
-                <?=ToLower($arResult["SECTION"]["NAME"])?>
-            </a>
-	    	*/?>
 	    	<?itc\CUncachedArea::show('BACK_URL')?>
             <h1 class="object__headerTitle">
                 <?=$arResult["NAME"]?>
@@ -31,11 +24,6 @@ $this->setFrameMode(true);
         <div class="object__slider object-detail__slider">
             <div class="objectSlider <?=sizeof($arResult["PROPERTIES"]["PHOTO"]["VALUE"]) == 1 ? "no-slider" : "";?>">
                 <ul class="objectSlider__slider">
-                    <?if($USER->isAdmin())
-                    {
-                        //echo "<pre>"; var_dump($arResult["PROPERTIES"]["PHOTO"]); echo "</pre>";
-                    }
-                    ?>
                     <?if(is_array($arResult["PROPERTIES"]["PHOTO"]["VALUE"]) && sizeof($arResult["PROPERTIES"]["PHOTO"]["VALUE"]) > 0){
                         foreach($arResult["PROPERTIES"]["PHOTO"]["VALUE"] as $key => $src){?>
                             <li class="objectSlider__sliderItem">
