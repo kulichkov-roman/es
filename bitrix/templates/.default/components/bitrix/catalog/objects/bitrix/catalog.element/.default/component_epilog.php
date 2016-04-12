@@ -2,44 +2,45 @@
 /** @var array $templateData */
 /** @var @global CMain $APPLICATION */
 use Bitrix\Main\Loader;
-global $APPLICATION;
-if (isset($templateData['TEMPLATE_THEME']))
+
+$arSort = array(
+	'SORT'=>'ASC'
+);
+$arSelect = array(
+	'ID',
+	'NAME',
+	'CODE'
+);
+$arFilter = array(
+	'IBLOCK_ID' => OBJECTS_IBLOCK_ID,
+	'ID' => $arResult['ID']
+);
+
+$rsElements = CIBlockElement::GetList(
+	$arSort,
+	$arFilter,
+	false,
+	false,
+	$arSelect
+);
+
+if ($arItem = $rsElements->Fetch())
 {
-	$APPLICATION->SetAdditionalCSS($templateData['TEMPLATE_THEME']);
-}
-if (isset($templateData['TEMPLATE_LIBRARY']) && !empty($templateData['TEMPLATE_LIBRARY']))
-{
-	$loadCurrency = false;
-	if (!empty($templateData['CURRENCIES']))
-		$loadCurrency = Loader::includeModule('currency');
-	CJSCore::Init($templateData['TEMPLATE_LIBRARY']);
-	if ($loadCurrency)
+	$arElement = $arItem;
+
+	$fullPath = $arResult['SECTION']['SECTION_PAGE_URL'].$arItem['CODE'].'/';
+
+	if($fullPath != $APPLICATION->GetCurDir())
 	{
-	?>
-	<script type="text/javascript">
-		BX.Currency.setCurrencies(<? echo $templateData['CURRENCIES']; ?>);
-	</script>
-<?
+		LocalRedirect($fullPath);
 	}
-}
-if (isset($templateData['JS_OBJ']))
-{
-?><script type="text/javascript">
-BX.ready(BX.defer(function(){
-	if (!!window.<? echo $templateData['JS_OBJ']; ?>)
-	{
-		window.<? echo $templateData['JS_OBJ']; ?>.allowViewedCount(true);
-	}
-}));
-</script><?
 }
 
-// поместить кнопку назад в некешируемую область
 itc\CUncachedArea::startCapture();
 ?>
-<a href="<?=$arResult["SECTION"]["SECTION_PAGE_URL"]?>" class="object__headerPrev">
-	<?=ToLower($arResult["SECTION"]["NAME"])?>
-</a>
+	<a href="<?=$arResult["SECTION"]["SECTION_PAGE_URL"]?>" class="object__headerPrev">
+		<?=ToLower($arResult["SECTION"]["NAME"])?>
+	</a>
 <?
 $showBackUrl = itc\CUncachedArea::endCapture();
 itc\CUncachedArea::setContent("BACK_URL", $showBackUrl);
