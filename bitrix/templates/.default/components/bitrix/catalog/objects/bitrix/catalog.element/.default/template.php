@@ -76,7 +76,7 @@ $this->setFrameMode(true);
                 }?>
                 <?if($arResult['DETAIL_TEXT'] <> ""){?>
                     <a href="javascript:void(0);" class="object-detail__collapse-btn collapse-block__button">
-                        <span class="object-detail__collapse-btn-text">Свернуть описание объекта</span>
+                        <span class="object-detail__collapse-btn-text"><?=GetMessage("OBJECT_ELEMENT_DETAIL_TEXT_COLLAPSE");?></span>
                     </a>
                 <?}?>
             </div>
@@ -85,7 +85,7 @@ $this->setFrameMode(true);
     <?if($arResult['DETAIL_TEXT'] <> ""){?>
         <div class="object-detail__collapse collapse-block__cont collapse typo">
             <div class="object-detail__collapse-cont">
-                <div class="object-detail__title">Полное описание объекта:</div>
+                <div class="object-detail__title"><?=GetMessage("OBJECT_ELEMENT_DETAIL_TEXT_TITLE");?></div>
                 <div class="object-detail__cont">
                     <?=$arResult['DETAIL_TEXT']?>
                 </div>

@@ -68,6 +68,8 @@ $MESS["/bitrix/templates/.default/components/bitrix/catalog/objects/bitrix/catal
 // объекты карточка объекта
 $MESS["/bitrix/templates/.default/components/bitrix/catalog/objects/bitrix/catalog.element/.default/lang/ru/template.php"]["OBJECT_ELEMENT_PHOTO"] = "Фотография";
 $MESS["/bitrix/templates/.default/components/bitrix/catalog/objects/bitrix/catalog.element/.default/lang/ru/template.php"]["OBJECT_ELEMENT_WATCH_ON_MAP"] = "смотреть на карте";
+$MESS["/bitrix/templates/.default/components/bitrix/catalog/objects/bitrix/catalog.element/.default/lang/ru/template.php"]["OBJECT_ELEMENT_DETAIL_TEXT_COLLAPSE"] = "Свернуть описание объекта";
+$MESS["/bitrix/templates/.default/components/bitrix/catalog/objects/bitrix/catalog.element/.default/lang/ru/template.php"]["OBJECT_ELEMENT_DETAIL_TEXT_TITLE"] = "Полное описание объекта:";
 
 // объекты на карте - форма добавления города
 $MESS["/bitrix/templates/.default/components/bitrix/iblock.element.add.form/add_city/lang/ru/template.php"]["ADD_CITY_NAME"] = "Название города";
