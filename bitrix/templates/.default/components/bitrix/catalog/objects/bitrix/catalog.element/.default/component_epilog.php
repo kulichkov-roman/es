@@ -32,7 +32,7 @@ if ($arItem = $rsElements->Fetch())
 
 	if($fullPath != $APPLICATION->GetCurDir())
 	{
-		LocalRedirect($fullPath);
+		LocalRedirect($fullPath, '301 Moved permanently');
 	}
 }
 
